@@ -7,10 +7,7 @@ BookNest là website tĩnh giới thiệu tủ sách dùng chung cho sinh viên:
 ## Liên kết
 
 - **Repository:** [github.com/dinhquang22489-max/booknest-student-book](https://github.com/dinhquang22489-max/booknest-student-book)
-- **GitHub Pages:** [Dán URL GitHub Pages] — URL xuất bản chưa được xác minh trong workspace.
-
-Khi cấu hình GitHub Pages, chọn nhánh `main` và thư mục `/(root)`. Đây là hướng dẫn cấu hình, không xác nhận rằng Pages đã được bật.
-
+- **GitHub Pages:** [dinhquang22489-max.github.io/booknest-student-book/](https://dinhquang22489-max.github.io/booknest-student-book)
 ## Cấu trúc dự án
 
 ```text
