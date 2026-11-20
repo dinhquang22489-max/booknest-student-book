@@ -1,62 +1,37 @@
 # BookNest — Góc Đọc & Trao Đổi Sách Sinh Viên
 
-**Tác giả:** Đinh Nhật Quang — **MSV:** 2071020158
+## Sản phẩm này là gì?
+Website tĩnh giới thiệu góc đọc sách, danh mục sách gợi ý và lịch trao đổi sách miễn phí dành cho sinh viên năm nhất. Tác giả: Đinh Nhật Quang — MSV: 2071020158.
 
-BookNest là website tĩnh giới thiệu tủ sách dùng chung cho sinh viên: xem các nhóm sách gợi ý, lịch mở tủ sách và gửi biểu mẫu mô phỏng đăng ký mượn hoặc góp sách.
+## Demo
+https://dinhquang22489-max.github.io/booknest-student-book/
 
-## Liên kết
+## Tính năng
+- Bấm `Giới thiệu`, `Kệ sách gợi ý`, `Lịch trao đổi` hoặc `Đăng ký mượn` trên thanh điều hướng để cuộn tới nội dung tương ứng.
+- Xem ba nhóm sách gợi ý (Kỹ năng học tập, Tư duy công nghệ, Văn học & Tản văn) kèm ảnh minh họa và bảng lịch mở tủ sách hằng tuần.
+- Điền biểu mẫu rồi bấm **Kiểm tra biểu mẫu** để kiểm tra HTML5 và chuyển tới trang kết quả mô phỏng `ket-qua.html`.
 
-- **Repository:** [github.com/dinhquang22489-max/booknest-student-book](https://github.com/dinhquang22489-max/booknest-student-book)
-- **GitHub Pages:** [booknest-student-book](https://dinhquang22489-max.github.io/booknest-student-book/)
+## Cách mở
+1. Mở URL ở mục **Demo** bằng trình duyệt, hoặc mở `index.html` trên máy cá nhân.
+2. Bấm **Kệ sách gợi ý** trên thanh menu để xem ba nhóm sách.
+3. Bấm **Lịch trao đổi** để xem thời gian và địa điểm mở tủ sách.
+4. Bấm **Đăng ký mượn**, nhập các trường **Họ và tên người mượn**, **Email liên hệ**, **Tên sách muốn mượn & ngày nhận dự kiến**, rồi bấm **Kiểm tra biểu mẫu**.
 
-## Hồ sơ bàn giao
+## Cấu trúc thư mục
+- `index.html`: Trang chủ BookNest.
+- `ket-qua.html`: Trang kết quả mô phỏng sau khi kiểm tra biểu mẫu.
+- `css/style.css`: Giao diện Flexbox, CSS Grid và Responsive Mobile-First.
+- `assets/images/`: Bốn ảnh `hero-bookshelf.jpg`, `sach-ky-nang.jpg`, `sach-cong-nghe.jpg`, `sach-van-hoc.jpg`.
+- `docs/evidence-index.md`: Bảng minh chứng kiểm thử; `evidence/`: ảnh chụp minh chứng.
+- `CHANGELOG.md`, `docs/AI_LOG.md`, `RELEASE_NOTES.md`: Lịch sử phiên bản, nhật ký AI và ghi chú phát hành.
 
-- [README.md](README.md) — hướng dẫn sử dụng và kiểm tra.
-- [CHANGELOG.md](CHANGELOG.md) — lịch sử các phiên bản `v3` đến `v1`.
-- [docs/evidence-index.md](docs/evidence-index.md) — phép thử và minh chứng.
-- [AI_LOG.md](AI_LOG.md) — nhật ký sử dụng AI.
-- [RELEASE_NOTES.md](RELEASE_NOTES.md) — ghi chú phát hành hiện tại.
+## Đã kiểm tra
+Xem [docs/evidence-index.md](docs/evidence-index.md): đã kiểm tra GitHub Pages, bấm đủ bốn mục menu, thử responsive tại `320px`, `640px`, `960px` và kiểm tra form hợp lệ/không hợp lệ.
 
-## Cấu trúc dự án
+## Hạn chế / Chưa kiểm tra
+- Website tĩnh HTML5/CSS3; biểu mẫu chỉ kiểm tra dữ liệu phía trình duyệt, chưa lưu vào cơ sở dữ liệu hoặc gửi email.
+- Chưa kiểm thử trên iPhone vật lý; responsive được kiểm tra bằng Playwright trên trình duyệt.
 
-```text
-booknest-student-book/
-├── README.md
-├── CHANGELOG.md
-├── AI_LOG.md
-├── RELEASE_NOTES.md
-├── docs/
-│   └── evidence-index.md
-├── index.html
-├── ket-qua.html
-├── css/
-│   └── style.css
-└── assets/
-    └── images/
-        ├── hero-bookshelf.jpg
-        ├── sach-cong-nghe.jpg
-        ├── sach-ky-nang.jpg
-        └── sach-van-hoc.jpg
-```
-
-## Chạy trên máy local
-
-1. Tải hoặc clone repository.
-2. Mở `index.html` trực tiếp trong trình duyệt; hoặc mở thư mục dự án bằng VS Code và chạy `index.html` qua tiện ích Live Server.
-3. Nếu gửi biểu mẫu bằng phương thức GET, trình duyệt sẽ điều hướng đến `ket-qua.html` và các trường có thể xuất hiện trong query string. Chỉ dùng dữ liệu giả khi thử.
-
-## Kiểm tra trang và chức năng
-
-Đã kiểm tra trên GitHub Pages công khai ngày 21/11/2026:
-
-1. Ở 320px, trang không tràn ngang; menu hiển thị và bảng cuộn ngang bên trong `.table-wrap`.
-2. Lưới thẻ sách có một cột ở 320px, hai cột ở 640px và ba cột ở 960px; ảnh trong từng hàng có chiều cao đồng đều.
-3. Biểu mẫu chặn trường bắt buộc để trống và email sai định dạng (`:user-invalid`); dữ liệu kiểm thử hợp lệ được chuyển bằng GET đến `ket-qua.html`.
-4. Dùng `Tab` và `Shift + Tab` cho thấy viền `:focus-visible` rõ trên phần tử đang nhận focus.
-5. Tài liệu trang chủ, CSS và bốn ảnh JPG trả về HTTP `200` khi tải từ GitHub Pages.
-
-Chi tiết số đo và giới hạn minh chứng ảnh chụp được ghi trong [docs/evidence-index.md](docs/evidence-index.md).
-
-## Ảnh và nguồn
-
-Thư mục `assets/images/` hiện có bốn ảnh JPG được dùng trong trang: ảnh kệ sách (`hero-bookshelf.jpg`) và ba ảnh cho các nhóm sách (`sach-cong-nghe.jpg`, `sach-ky-nang.jpg`, `sach-van-hoc.jpg`). Thông tin nguồn do chủ dự án cung cấp: **Unsplash**, các nhiếp ảnh gia **Đào Việt Hoàng, Yen Vu và Nadiia Shuran**. Repository hiện không ghi URL ảnh gốc hoặc ánh xạ từng ảnh đến từng nhiếp ảnh gia; thông tin đối chiếu theo từng tệp: **[Chưa kiểm tra]**.
+## Khai báo AI & Nguồn tài nguyên
+- Nhật ký sử dụng AI và tự kiểm chứng: [AI_LOG.md](docs/AI_LOG.md).
+- Ảnh từ Unsplash (Unsplash License): `hero-bookshelf.jpg` (Đào Việt Hoàng), `sach-ky-nang.jpg` và `sach-cong-nghe.jpg` (Yen Vu), `sach-van-hoc.jpg` (Nadiia Shuran).
