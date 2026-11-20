@@ -1,6 +1,18 @@
 # AI_LOG.md — Nhật ký sử dụng AI
 
-Tài liệu này ghi nhận các tình huống trong lượt rà soát và soạn tài liệu `v2` hiện tại. Lịch sử trước đó không được cung cấp; nội dung dưới đây không khẳng định các trao đổi AI trước phiên này. Những kiểm tra chưa chạy được đánh dấu rõ, không suy diễn thành kết quả.
+Tài liệu ghi lại các tình huống hỗ trợ AI khi rà soát và hoàn thiện hồ sơ BookNest. Các mục v2 dưới đây là ghi chép của lượt cập nhật trước; mục v3 ghi kết quả kiểm tra ngày 21/11/2026. Kết quả được phân biệt với các nội dung chưa xác minh.
+
+## Tình huống 4 — Hoàn thiện hồ sơ bàn giao v3
+
+- **Liên kết đối chiếu:** [Repository](https://github.com/dinhquang22489-max/booknest-student-book) · [GitHub Pages](https://dinhquang22489-max.github.io/booknest-student-book/).
+- **Hiện tượng và dữ kiện ban đầu:** Workspace có mã nguồn HTML/CSS, bốn ảnh JPG, ba tài liệu v2 và nhánh `main` đang ở tag `v2` (`52850b9`). Chưa có `CHANGELOG.md`, `docs/evidence-index.md` hoặc ảnh trong `evidence/`.
+- **Nhận định trước AI:** Có thể kiểm tra deployment công khai bằng trình duyệt, đo bố cục và thử form với dữ liệu giả. Không được ghi nhận ảnh chụp minh chứng chưa tồn tại.
+- **Công cụ / prompt hoặc phản hồi mẫu đã dùng:** Rà soát file và lịch sử Git cục bộ; mở GitHub Pages, kiểm tra tài nguyên mạng và chạy thử responsive, focus, form.
+- **Gợi ý nhận được:** Tạo changelog và chỉ mục minh chứng, cập nhật bộ tài liệu lên v3, ghi chính xác các phép thử đã thực hiện và để placeholder ảnh chụp.
+- **Quyết định của sinh viên:** Theo yêu cầu bàn giao, giữ nguyên thông tin tác giả Đinh Nhật Quang — MSV: 2071020158; dùng URL repository và Pages chính thức; không tạo tên ảnh giả.
+- **Phần sinh viên tự sửa trong mã nguồn / tài liệu:** Lượt này chỉ cập nhật tài liệu; không sửa HTML/CSS. Cần rà soát bộ hồ sơ trước khi nộp.
+- **Cách thử lại và kết quả thực tế:** Trên Pages, kiểm tra viewport `320px`, `640px`, `960px`; không có tràn ngang, lưới lần lượt 1/2/3 cột, ba ảnh card bằng chiều cao ở từng cỡ. `.table-wrap` rộng nội dung `480px` so với khung `271px` ở 320px. Form trống và email sai bị chặn, email sai khớp `:user-invalid`; gửi dữ liệu giả hợp lệ chuyển GET tới `ket-qua.html`. `Tab`/`Shift + Tab` hiển thị viền focus. HTTP `200` cho trang chủ, CSS và bốn ảnh JPG. Ảnh chụp minh chứng chưa có; placeholder được giữ trong `docs/evidence-index.md`.
+- **Giới hạn đối chiếu:** Commit `3bd310f` được nêu trong yêu cầu bàn giao nhưng không có trong lịch sử Git cục bộ hiện có; commit cục bộ hiện tại là `52850b9` (`v2`). Vì vậy, nội dung mã commit trong release note được giữ theo thông tin bàn giao, không xác nhận bằng log cục bộ.
 
 ## Tình huống 1 — Đối chiếu nguồn bốn ảnh Unsplash
 

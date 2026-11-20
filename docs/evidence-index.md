@@ -1,0 +1,16 @@
+# Chỉ mục phép thử và minh chứng — BookNest v3
+
+**Tác giả:** Đinh Nhật Quang — **MSV:** 2071020158; **Trang kiểm tra:** [GitHub Pages](https://dinhquang22489-max.github.io/booknest-student-book/); **Repository:** [dinhquang22489-max/booknest-student-book](https://github.com/dinhquang22489-max/booknest-student-book)
+
+| Tiêu chí / Tuyên bố | Phép thử thực hiện | Kết quả thực tế | Minh chứng mở được |
+|---|---|---|---|
+| Giao diện và menu ở màn hình hẹp `320px`, không cuộn ngang | Mở trang Pages ở viewport rộng `320px`; so sánh `document.documentElement.scrollWidth` với `clientWidth` và kiểm tra thanh điều hướng. | `scrollWidth` và `clientWidth` cùng `305px`; không có tràn ngang. Menu tự xuống dòng. | [Trang chủ](https://dinhquang22489-max.github.io/booknest-student-book/) · [Ảnh giao diện 320px](../evidence/after-320.png) |
+| Lưới thẻ sách tại breakpoint `640px` (2 cột) và `960px` (3 cột), ảnh đồng đều | Đo số cột CSS và chiều cao ba ảnh card ở viewport `640px` và `960px`. | `640px`: 2 cột, ảnh cao `183px`; `960px`: 3 cột, ảnh cao `188px` (cả ba ảnh bằng nhau ở từng viewport). | [Ảnh 640px](../evidence/breakpoint-640.png) · [Ảnh 960px](../evidence/breakpoint-960.png) |
+| Bảng lịch cuộn ngang nội bộ qua `.table-wrap` tại `320px` | So sánh `scrollWidth` và `clientWidth` của `.table-wrap` ở viewport `320px`. | Vùng bảng rộng `480px`, khung hiển thị rộng `271px`; bảng cuộn nội bộ và không làm tràn trang. | [Trang chủ](https://dinhquang22489-max.github.io/booknest-student-book/) · [Ảnh bảng responsive](../evidence/table-responsive.png) |
+| Form HTML5: `:user-invalid` khi bỏ trống hoặc nhập sai; chuyển hướng `GET` khi hợp lệ | Gửi form trống và với email sai định dạng; sau đó gửi dữ liệu kiểm thử giả hợp lệ. | Form trống đánh dấu 3 trường bắt buộc không hợp lệ; email sai khớp `:user-invalid` và không chuyển trang. Dữ liệu hợp lệ chuyển tới `ket-qua.html` với các trường trong query string. | [Ảnh form lỗi](../evidence/form-invalid.png) · [Ảnh kết quả GET](../evidence/form-ket-qua.png) |
+| Điều hướng bàn phím `Tab` / `Shift + Tab` có viền `:focus-visible` rõ | Di chuyển focus tới trước, tiếp theo và lùi lại bằng bàn phím; kiểm tra kiểu viền của phần tử đang focus. | Các liên kết điều hướng nhận focus đúng thứ tự; viền focus hiển thị (`outline: solid`, rộng `2.4px` trong trình duyệt kiểm tra) ở cả hai chiều. | [Ảnh menu có viền focus](../evidence/after-320.png) |
+| GitHub Pages công khai và các tài nguyên chính tải thành công | Mở trang triển khai và kiểm tra phản hồi mạng cho `index.html`, `css/style.css` và bốn ảnh JPG. | HTTP `200` cho trang chủ, `style.css`, `hero-bookshelf.jpg`, `sach-cong-nghe.jpg`, `sach-ky-nang.jpg`, `sach-van-hoc.jpg`. | [Trang chủ](https://dinhquang22489-max.github.io/booknest-student-book/) · [CSS](https://dinhquang22489-max.github.io/booknest-student-book/css/style.css) · [Ảnh 320px](../evidence/after-320.png) |
+
+## Ghi chú ảnh chụp
+
+Sáu ảnh được chụp bằng Playwright từ trang Pages công khai ngày 21/11/2026. Form dùng dữ liệu kiểm thử giả. Do ảnh trang không chứa thanh địa chỉ trình duyệt, `form-ket-qua.png` có thêm dòng chú thích chỉ dành cho ảnh minh chứng; URL trong dòng này lấy trực tiếp từ URL sau khi form thực tế điều hướng bằng GET. Mã website không bị thay đổi.
